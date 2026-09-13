@@ -1,5 +1,3 @@
-import './style.css';
-
 const eyes = document.querySelectorAll('.eye');
 let blinkTimer;
 

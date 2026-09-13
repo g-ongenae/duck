@@ -27,6 +27,15 @@ main {
 
 svg { display: block; width: 100%; overflow: visible; }
 
+@media (min-width: 768px) {
+  #duck {
+    display: grid;
+    place-items: center;
+    width: min(20vw, 80svh);
+    aspect-ratio: 1;
+  }
+}
+
 .duck-float {
   transform-origin: 160px 200px;
   animation: float 4s ease-in-out infinite;
