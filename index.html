@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="description" content="A quiet little rubber duck that floats and blinks." />
+    <title>Duck</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🦆%3C/text%3E%3C/svg%3E" />
+  </head>
+  <body>
+    <main>
+      <div id="duck" role="img" aria-label="A floating rubber duck that blinks.">
+        <svg viewBox="0 0 320 300" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <radialGradient id="body" cx="0" cy="0" r="1" gradientTransform="translate(140 165) rotate(72) scale(105 113)" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#FFE977" />
+              <stop offset=".46" stop-color="#FFD333" />
+              <stop offset=".8" stop-color="#F8BE12" />
+              <stop offset="1" stop-color="#E8A20A" />
+            </radialGradient>
+            <radialGradient id="head" cx="0" cy="0" r="1" gradientTransform="translate(139 68) rotate(62) scale(111 100)" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#FFF29A" />
+              <stop offset=".45" stop-color="#FFDE45" />
+              <stop offset="1" stop-color="#F8BE17" />
+            </radialGradient>
+            <linearGradient id="beak" x1="160" y1="121" x2="160" y2="150" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#FFAE3D" />
+              <stop offset=".5" stop-color="#F98B1F" />
+              <stop offset="1" stop-color="#E26D0E" />
+            </linearGradient>
+            <linearGradient id="wing" x1="160" y1="169" x2="160" y2="231" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#FFDE4E" />
+              <stop offset="1" stop-color="#F1B40D" />
+            </linearGradient>
+            <radialGradient id="eye" cx=".32" cy=".25" r=".8">
+              <stop stop-color="#474036" />
+              <stop offset="1" stop-color="#191813" />
+            </radialGradient>
+            <filter id="blur"><feGaussianBlur stdDeviation="7" /></filter>
+            <filter id="soft"><feGaussianBlur stdDeviation="2.5" /></filter>
+          </defs>
+          <ellipse class="shadow" cx="160" cy="263" rx="73" ry="9" fill="#493A12" opacity=".12" filter="url(#blur)" />
+          <g class="duck-float">
+            <path d="M126 146C114 156 92 160 82 182C67 211 82 240 115 249C140 256 180 256 205 249C238 240 253 211 238 182C228 160 206 156 194 146Z" fill="url(#body)" />
+            <path d="M92 174C77 183 74 205 86 224C90 231 98 230 101 223C106 208 108 190 104 181C101 174 96 172 92 174Z" fill="url(#wing)" />
+            <path d="M228 174C243 183 246 205 234 224C230 231 222 230 219 223C214 208 212 190 216 181C219 174 224 172 228 174Z" fill="url(#wing)" />
+            <path d="M91 182C84 191 83 203 88 212M222 181C229 186 234 198 231 208" stroke="#FFE879" stroke-width="3" stroke-linecap="round" opacity=".55" />
+            <path d="M113 141C102 129 99 112 102 94C106 67 129 50 160 50C191 50 214 67 218 94C221 112 218 129 207 141C198 151 194 157 196 166C177 180 143 180 124 166C126 157 122 151 113 141Z" fill="url(#head)" />
+            <path d="M119 81C128 67 143 62 157 64" stroke="#FFF6BB" stroke-width="8" stroke-linecap="round" opacity=".47" filter="url(#soft)" />
+            <g class="eye" style="transform-origin: 133px 108px">
+              <ellipse cx="133" cy="108" rx="7" ry="8.2" fill="url(#eye)" />
+              <ellipse cx="131" cy="105" rx="2.1" ry="2.5" fill="white" opacity=".92" />
+              <circle cx="136" cy="111" r="1" fill="#B2A67C" opacity=".4" />
+            </g>
+            <g class="eye" style="transform-origin: 187px 108px">
+              <ellipse cx="187" cy="108" rx="7" ry="8.2" fill="url(#eye)" />
+              <ellipse cx="185" cy="105" rx="2.1" ry="2.5" fill="white" opacity=".92" />
+              <circle cx="190" cy="111" r="1" fill="#B2A67C" opacity=".4" />
+            </g>
+            <path d="M133 124C141 118 151 119 160 120C169 119 179 118 187 124C193 128 197 132 192 138C184 148 136 148 128 138C123 132 127 128 133 124Z" fill="url(#beak)" />
+            <path d="M129 133C145 138 175 138 191 133" stroke="#DA710F" stroke-width="1.7" stroke-linecap="round" opacity=".65" />
+            <path d="M137 125C149 122 171 122 183 125" stroke="#FFCB72" stroke-width="2.5" stroke-linecap="round" opacity=".7" />
+            <ellipse cx="149" cy="125" rx="1.5" ry="1" fill="#D97919" opacity=".5" />
+            <ellipse cx="171" cy="125" rx="1.5" ry="1" fill="#D97919" opacity=".5" />
+            <path d="M121 233C143 242 177 242 199 233" stroke="#FFE46A" stroke-width="4" stroke-linecap="round" opacity=".3" />
+          </g>
+        </svg>
+      </div>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

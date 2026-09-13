@@ -1,0 +1,56 @@
+:root {
+  color-scheme: light;
+  background: #fff;
+  font-family: system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body { margin: 0; }
+
+main {
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+}
+
+#duck {
+  display: block;
+  width: min(320px, 76vw);
+  padding: 0;
+  border: 0;
+  background: transparent;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  border-radius: 50%;
+}
+
+svg { display: block; width: 100%; overflow: visible; }
+
+.duck-float {
+  transform-origin: 160px 200px;
+  animation: float 4s ease-in-out infinite;
+}
+
+.shadow { animation: shadow 4s ease-in-out infinite; transform-origin: 160px 263px; }
+.eye { transform: scaleY(1); }
+.eye.blink { animation: blink 190ms ease-in-out; }
+
+@keyframes float {
+  0%, 100% { transform: translateY(2px) rotate(-1deg); }
+  50% { transform: translateY(-5px) rotate(1deg); }
+}
+
+@keyframes shadow {
+  0%, 100% { transform: scaleX(1); opacity: .12; }
+  50% { transform: scaleX(.92); opacity: .085; }
+}
+
+@keyframes blink {
+  0%, 100% { transform: scaleY(1); }
+  40%, 60% { transform: scaleY(.08); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .duck-float, .shadow { animation: none; }
+}
